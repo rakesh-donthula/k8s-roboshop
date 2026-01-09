@@ -27,6 +27,16 @@ spec:
       containers:
       - name: mongodb
         image: rakesh2218/mongodb:v1
+        readinessProbe:
+          tcpSocket:
+            port: 27017
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 27017
+          initialDelaySeconds: 5
+          periodSeconds: 5
 
 # apiVersion: apps/v1
 # kind: Deployment
