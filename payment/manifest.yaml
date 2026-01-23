@@ -39,8 +39,8 @@ spec:
         tier: backend
     spec:
       securityContext:
-        runAsUser: 1000
-        runAsNonRoot: true
+        runAsUser: 0
+        # runAsNonRoot: true
       containers:
       - name: payment
         image: rakesh2218/payment:v1
