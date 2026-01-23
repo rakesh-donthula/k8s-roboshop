@@ -39,6 +39,7 @@ spec:
         tier: backend
     spec:
       securityContext:
+        runAsUser: 1000
         runAsNonRoot: true
       containers:
       - name: payment
