@@ -38,6 +38,8 @@ spec:
         component: payment
         tier: backend
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - name: payment
         image: rakesh2218/payment:v1
